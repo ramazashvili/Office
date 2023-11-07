@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <header>
+        <h1>MyoFFice</h1>
+    </header>
+
+  <div class="col-sm-2 mt-4 mb-3">
+    <span> SelecT CategorY </span>
+    <select class="form-select" aria-label="default select example" (change)="onChange($event)">
+        <option *ngFor="let cl of categoryList">{{cl | titlecase}}</option>
+    </select>
+  </div>
+
+
+  <div class="row">
+
+    <div *ngIf="showData; then allData else filter"></div>
+
+    <ng-template #allData>
+        
+        <div class="col-lg-3 col-12 mt-3 mb-3" *ngFor="let item of showAllData">
+           
+            <div class="box">
+
+                <h2>{{item.name  | titlecase}}</h2>
+                <p><span><i class="bi bi-tag"></i> {{ item.category | titlecase }} | <span><i class="bi bi-back"></i> </span> {{ item.type | titlecase }}</span><p>
+                <p>VisiT SiTe <i class="bi bi-arrow-right"></i></p>
+            </div>
+
+        </div>
+    </ng-template>
+    
+    <ng-template #filter>
+        
+        <div class="col-lg-3 col-12 mt-3 mb-3" *ngFor="let item of filterData">
+           
+            <div class="box">
+
+                <h2>{{item.name  | titlecase}}</h2>
+                <p><span><i class="bi bi-tag"></i> {{ item.category | titlecase }} | <span><i class="bi bi-back"></i> </span>{{ item.type | titlecase }}</span><p>
+                <p>VisiT SiTe <i class="bi bi-arrow-right"></i></p>
+            </div>
+
+        </div>
+    </ng-template>
+
+  </div>
+
+
+   
+
+
+     
+

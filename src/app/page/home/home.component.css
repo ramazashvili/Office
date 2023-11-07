@@ -1,0 +1,52 @@
+header{
+    background-image: url('../../../assets/business-professional-dress-code-men-harvey-specter-suit-style-luxe-digital.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    margin: 2% 0%;
+    border-radius: 5px;
+    
+}
+
+header h1{
+    font-size: 50px;
+    text-align: center;
+    padding: 32% 0%;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+
+.box{
+    border: 1px solid #0020af;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.row {
+    margin: 30px 45px;
+}
+
+.box a{
+    text-decoration: none;
+    color: #fc0000;
+}
+
+.box:hover{
+    color: #ffff;
+    background-color: #0020af;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.box a:hover {
+    color: #ffffff;
+}
+
+@media screen and (max-width:600px) {
+    header h1{
+        font-size: 35px;
+        padding: 110% 0%;
+    }
+}
